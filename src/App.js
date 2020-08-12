@@ -11,9 +11,12 @@ function App() {
       </header>
       <main className="colorful-border">
         <List>
-          <ListItem href="#">
+          <ListItem href="#bulbasaur">
             <div>Icon</div>
-            <div style={{ flexGrow: 1 }}>Text</div>
+            <div style={{ flexGrow: 1 }}>
+              <h2>primary</h2>
+              <p> secondary</p>
+            </div>
             <div>Icon</div>
           </ListItem>
           {/* <ListItem href="#">

@@ -1,11 +1,14 @@
 import React from "react";
 
-function ListItem(props) {
+function ListItemText(primary, secondary) {
   return (
-    <a className="listItem" href={props.href}>
-      {props.children}
-    </a>
+    <div>
+      <h2>{primary}</h2>
+      <p>{secondary}</p>
+    </div>
   );
 }
 
-export default ListItem;
+export default ListItemText;
+
+//<ListItemText primary="Bulbasaur" secondary="#001" />

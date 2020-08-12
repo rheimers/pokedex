@@ -1,7 +1,7 @@
 import React from "react";
 
-function ListImg(props) {
-  return <img src="#" alt="#" />;
+function ListImg(src, alt) {
+  return <img src={src} alt={alt} />;
 }
 
 export default ListImg;
