@@ -3,27 +3,31 @@ import "./App.css";
 import List from "./components/List";
 import ListItem from "./components/ListItem";
 import ListItemText from "./components/ListItemText";
+import ListItemImg from "./components/ListItemImg";
 
 function App() {
   return (
     <div className="app">
       <header>
-        Pokedex <input />
+        <h1>Pokedex</h1>
+        <input className="input" placeholder="Search a Poke" />
       </header>
       <main className="colorful-border">
         <List>
-          <ListItem href="#bulbasaur">
+          <ListItem href="#pikachu">
+            <ListItemImg
+              src="http://pngimg.com/uploads/pokemon/pokemon_PNG146.png"
+              alt="pikachu"
+            />
+            <ListItemText primary="Pikachu" secondary="#001" />
             <div>Icon</div>
-            <ListItemText primary="Bulbasaur" secondary="#001" />
-            <div>Icon</div>
-            {/* <ListItemIcon src="" />
-            <ListItemText primary="Bulbasaur" secondary="#001" />
-            <ListItemIcon src="" />
-            <ListItemIcon src="" /> */}
           </ListItem>
           <ListItem href="#ivysaur">
-            <div>Icon</div>
-            <ListItemText primary="Ivysaur" secondary="#002" />
+            <ListItemImg
+              src="http://pngimg.com/uploads/pokemon/pokemon_PNG157.png"
+              alt="schiggy"
+            />
+            <ListItemText primary="Schiggy" secondary="#002" />
             <div>Icon</div>
           </ListItem>
         </List>

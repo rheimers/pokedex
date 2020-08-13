@@ -3,7 +3,7 @@ import "./ListItemText.css";
 
 function ListItemText({ primary, secondary }) {
   return (
-    <div>
+    <div className="listItemText">
       <h2>{primary}</h2>
       <p>{secondary}</p>
     </div>
