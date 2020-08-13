@@ -29,3 +29,7 @@
     rgb(216, 193, 151) 50%
   );
 }
+
+.app > input {
+  border-radius: 10px;
+}

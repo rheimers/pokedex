@@ -1,0 +1,7 @@
+.listItemImg {
+  width: 3.5rem;
+  height: 3.5rem;
+  /* achtung vielleicht keine fixe Weite und Höhe */
+  object-fit: contain;
+  /* Hinterlegen Bild in Container */
+}
