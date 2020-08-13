@@ -1,6 +1,6 @@
 import React from "react";
 
-function List(children) {
+function List({ children }) {
   return <nav>{children}</nav>;
 }
 
