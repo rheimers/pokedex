@@ -1,9 +1,10 @@
 import React from "react";
+import "./ListItemText.css";
 
 function ListItemText({ primary, secondary }) {
   return (
     <div>
-      <span>{primary}</span>
+      <h2>{primary}</h2>
       <p>{secondary}</p>
     </div>
   );
