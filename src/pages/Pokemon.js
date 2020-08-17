@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import { fetchPokemon } from "../api/pokemon";
 import Loading from "../components/Loading";
+import { useParams, useHistory } from "react-router-dom";
 
 function Pokemon() {
   const { name } = useParams();
   const [pokemon, setPokemon] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const history = useHistory();
 
-  //   ùseParams`hook to access the dynmaic pieces of the URL
+  //   useParams hook to access the dynmaic pieces of the URL
 
   useEffect(() => {
     async function fetchData() {
@@ -35,11 +36,24 @@ function Pokemon() {
   }
 
   return (
-    <div>
-      <div>ID: {pokemon.id}</div>
-      <div>Name: {pokemon.name}</div>
-      <div>
-        IMG: <img src={pokemon.imgSrc} alt={pokemon.name} />
+    <div className="pokemon">
+      <header className="pokemon__header">
+        <button className="pokemon__close" onClick={() => history.goBack()}>
+          <svg height="24" viewBox="0 0 24 24" width="24">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+          </svg>
+        </button>
+        <h2 className="pokemon__title">{pokemon.name}</h2>
+      </header>
+      <div className="pokemon__body">
+        <img
+          className="pokemon__image"
+          src={pokemon.imgSrc}
+          alt={pokemon.name}
+        />
+        <div>HP: {pokemon.hp}</div>
+        <div>Attack: {pokemon.attack}</div>
+        <div>Defense: {pokemon.defense}</div>
       </div>
     </div>
   );
